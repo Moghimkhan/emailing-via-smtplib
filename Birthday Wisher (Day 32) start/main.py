@@ -36,15 +36,22 @@ def main():
     weekday = now.weekday()
 
     # Check if it's Friday (weekday == 4)
-    if weekday == 3:
+    if weekday == 1:
         # Get a random quote
         quote = get_random_quote("quotes.txt")
         print(quote)
 
         # Prepare and send the email
-        subject = "Happy New Week"
+        subject = "Happy new Week"
         send_email(subject, quote, agent_email)
+    elif weekday == 3:
+        # Get a random quote
+        quote = get_random_quote("quotes.txt")
+        print(quote)
 
+        # Prepare and send the email
+        subject = "Quotes of the Week"
+        send_email(subject, quote, agent_email)
 if __name__ == "__main__":
     # Run the main function when the script is executed
     main()
